@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #181818;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 70px;
+            left: 100px;
+            background: transparent;
+            border: 2px solid #FFC001;
+            color: #FFC001;
+            padding: 10px 15px;
+            border-radius: 25px; /* More rounded corners */
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .back-button:hover {
+            background-color: #FFC001;
+            color: #000;
+        }
+        
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 8px 12px;
+                font-size: 14px;
+                border-radius: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .back-button {
+                top: 70px;
+                left: 20px;
+                padding: 6px 10px;
+                font-size: 13px;
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back button -->
+    <button class="back-button" onclick="goBack()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+        </svg>
+        Back
+    </button>
+    
+    <!-- Replace "your-image.jpg" with your actual image file name -->
+    <img src="menu3/TOBACCO.jpg" alt="">
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
